@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Checkout example · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
+    
+
+    
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .container {
+  max-width: 960px;
+}
+    </style>
+
+    
+   
+  </head>
+  <body class="bg-light">
+    
+<div class="container">
+  <main>
+    <form action="/form" method="post" enctype = “multipart/form-data”>
+    
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="logo-black.png" alt="" width="72" height="57">
+      <h2>VACANCY FORM</h2>
+      <p class="lead"> PLEASE APPPLY HERE FOR THE VACANCIES.<BR>
+    After you've submitted the form,further details will be communicated on the registered mail.</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">EMPLOYMENT DESIRED:</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+                <label for="jobtitle" >JOB TITLE APPLYING FOR:</label>
+                <select class="form-select" id="jobtitle" name="jobtitle" required>
+                  <option value="">SELECT</option>
+                  <option value="PROJECT MANAGER">PROJECT MANAGER</option>
+                  <option value="FULL STACK DEVELOPER">FULL STACK DEVELOPER</option>
+                  <option value="BACK-END DEVELOPER">BACK-END DEVELOPER</option>
+                  <option value="FRONT-END DEVELOPER">FRONT-END DEVELOPER</option>
+                  <option value="SYSTEM ANALYST">SYSTEM ANALYST</option>
+                  <option value="NETWORK ARCHITECT">NETWORK ARCHITECT</option>
+                  <option value="DATABASE ADMINISTRATOR">DATABASE ADMINISTRATOR</option>
+                  <option value="DATABASE ANALYST">DATABASE ANALYST</option>
+                  <option value="DATA WAREHOUSE MANAGER">DATA WAREHOUSE MANAGER</option>
+                  <option value="PLATFORM ENGINEER">PLATFORM ENGINEER</option>
+                  <option value="UI DESIGNER">UI DESIGNER</option>
+                  <option value="IT SECURITYY ENGINEER">IT SECURITYY ENGINEER</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid JOB TITLE
+                </div>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">Date you can join:</h6>
+              <small class="text-muted">
+                <label for="start"></label>
+                  <input type="date" id="joindate"name="joindate" value="2022-07-22" min="2023-01-01" max="2023-12-31">
+                </small>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">salary desired:</h6>
+              <small class="text-muted">
+                <label for="des_salary" class="form-label">IN rupees</label>
+                <input type="text" name="des_salary"id="des_salary" placeholder="" required>
+                <div class="invalid-feedback">
+                  please enter the desired salary.
+                </div>
+            </small>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div>
+              <h6 class="my-0">Have you ever worked here before:</h6>
+              <small><select class="form-select" name="workbefore"id="workbefore" required>
+                <option value="">Choose...</option>
+                <option>yes</option>
+                <option>no</option>
+
+              </select></small>
+            </div>
+           
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div >
+              <h6 class="my-0">Have you ever applied here here before:</h6>
+              <small><select class="form-select" name="appliedbefore" id="appliedbefore" required>
+                <option value="">Choose...</option>
+                <option>yes</option>
+                <option>no</option>
+
+              </select></small>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">APPLICANT'S DETAILS</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" name="firstname"id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="middleName" class="form-label">middle name</label>
+                <input type="text" name="firstname" id="middleName" > 
+              </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" name="lastname"  id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="userID" class="form-label">User ID</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" name="userID" id="userID" placeholder="userID" required>
+              <div class="invalid-feedback">
+                  Your userID is required.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email </label>
+              <input type="email" name="email" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email that is registered with us
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="phone" class="form-label">PHONE NUMBER:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <BR>
+                <small>Format: 123-456-7890</small>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+             
+            <div class="col-sm-6">
+                <label for="dob" class="form-label">DATE OF BIRTH</label>
+                <BR>
+                <input type="date" id="dob" name="dob"
+                  value="2022-07-22"
+                  min="1960-01-01" max="2002-12-31">
+                <div class="invalid-feedback">
+                  Valid D-O-B is required.
+                </div>
+              </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" name="address" id="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your current residing address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text"  id="address2" name="address2" placeholder="Apartment or suite">
+            </div>
+            <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" name="state" required>
+                  <option value="">Choose...</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text"  name="zip"id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="indian" class="form-label">Are you an indian citizen</label>
+              <select class="form-select" name="indian"id="indian" required>
+                <option value="">Choose...</option>
+                <option>yes</option>
+                <option>no</option>
+
+              </select>
+              <div class="invalid-feedback">
+                Please select a option
+              </div>
+            </div>
+
+            
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" name="trueinfo"for="same-address">I hereby declare that all information is true and authentic.</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" name="saveinfo"for="save-info">Save this information for next time</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">ADDITIONAL APPLICANT DETAILS:</h4>
+
+          <div class="my-3">
+            <form class="card p-2" enctype = “multipart/form-data”>
+                <div class="input-group">
+                  <div>ENTER YOUR RESUME HERE </div>
+                  <small class="text-muted"><p>All academic qualifications must be mentioned.
+                    Applicants having qualification adhering to the mentioned will be favoured. </p></small>
+                  <div>
+                  <input type="file" id="resume" name="resume"placeholder="applcant resume">
+                </div></div>
+              </form>
+          </div> 
+          <div class="my-3">
+            <form class="card p-2">
+                <div class="input-group">
+                  <div>ENTER YOUR PASSPORT SIZE IMAGE: </div>
+                  <small class="text-muted"><p>Image must be in passport size and strictly formal.
+                    no selfies or any other informal images will not be considered. </p></small>
+                  <div>
+                  <input type="file" id="photo"name="photo"placeholder="appilcant photo">
+                </div></div>
+              </form>
+            </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">SUBMIT THE FORM</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2022-HiringNeeds</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="/home">HOME PAGE</a></li>
+      <li class="list-inline-item"><a href="#">CONTACT US</a></li>
+    </ul>
+  </footer>
+</div>
+      <script>
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+      </script>
+  </body>
+</html>
